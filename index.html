@@ -4,20 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPL Ticket Booking</title>
-    <style>
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .table-box {
-            overflow-x: auto;
-        }
-        .card {
-            border: 1px solid black;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -183,6 +170,7 @@
 
         <section id="mybookings">
             <h2>My Ticket Bookings</h2>
+            <div class="table-box">
             <table border="1">
                 <thead>
                     <tr>
@@ -196,6 +184,7 @@
                 <tbody>
                 </tbody>
             </table>
+            </div>
         </section>
 
         <section id="guidelines">
