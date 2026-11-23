@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets | IPL Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>IPL Ticket Booking</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="index.html#matches">Matches</a> |
+            <a href="booking.html">Book Ticket</a> |
+            <a href="index.html#guidelines">Guidelines</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking-page">
+            <h2>Ticket Booking Form</h2>
+            <p>Fill in your details below. All fields marked <span class="req">*</span> are required.</p>
+
+            <form id="ticketForm" class="booking-form" action="booking-success.html" method="get">
+
+                <fieldset>
+                    <legend>Personal Details</legend>
+
+                    <label for="fullName">Full Name <span class="req">*</span></label>
+                    <input type="text" id="fullName" name="fullName"
+                           placeholder="e.g. Rahul Sharma"
+                           required minlength="3" maxlength="40">
+
+                    <label for="email">Email <span class="req">*</span></label>
+                    <input type="email" id="email" name="email"
+                           placeholder="e.g. rahul@gmail.com"
+                           required maxlength="50">
+
+                    <label for="phone">Phone Number <span class="req">*</span></label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="10 digit mobile number"
+                           required minlength="10" maxlength="10" pattern="[6-9][0-9]{9}"
+                           title="Enter a valid 10 digit mobile number starting with 6-9">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Match &amp; Seats</legend>
+
+                    <label for="match">Select Match <span class="req">*</span></label>
+                    <select id="match" name="match" required>
+                        <option value="">-- Choose a match --</option>
+                        <option value="1">Match 1 - CSK vs MI (28 Mar, Chennai)</option>
+                        <option value="2">Match 2 - RCB vs KKR (29 Mar, Bengaluru)</option>
+                        <option value="3">Match 3 - MI vs SRH (30 Mar, Mumbai)</option>
+                        <option value="4">Match 4 - KKR vs CSK (31 Mar, Kolkata)</option>
+                    </select>
+
+                    <label for="stand">Stand Category <span class="req">*</span></label>
+                    <select id="stand" name="stand" required>
+                        <option value="">-- Choose a stand --</option>
+                        <option value="General">General</option>
+                        <option value="Premium">Premium</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+
+                    <label for="tickets">Number of Tickets <span class="req">*</span> (1 - 10)</label>
+                    <input type="number" id="tickets" name="tickets"
+                           required min="1" max="10" value="1">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Booking Preferences</legend>
+
+                    <p class="field-title">Seat Preference <span class="req">*</span></p>
+                    <div class="choice-group">
+                        <label><input type="radio" name="seat" value="Aisle" required> Aisle</label>
+                        <label><input type="radio" name="seat" value="Middle"> Middle</label>
+                        <label><input type="radio" name="seat" value="Any"> No preference</label>
+                    </div>
+
+                    <p class="field-title">Add-ons (optional)</p>
+                    <div class="choice-group">
+                        <label><input type="checkbox" name="addons" value="Parking"> Parking Pass</label>
+                        <label><input type="checkbox" name="addons" value="Food"> Food Combo</label>
+                        <label><input type="checkbox" name="addons" value="Jersey"> Team Jersey</label>
+                    </div>
+
+                    <div class="choice-group">
+                        <label><input type="checkbox" name="terms" value="yes" required>
+                            I agree to the stadium rules and guidelines <span class="req">*</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit Booking</button>
+                    <button type="reset" class="btn-outline">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IPL Ticket Booking. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
