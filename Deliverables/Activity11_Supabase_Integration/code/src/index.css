@@ -1,0 +1,118 @@
+:root {
+  --primary: #0b1d51;
+  --accent: #f5b301;
+  --background: #f2f4f8;
+  --text: #222222;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-top: 64px;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  z-index: 10;
+}
+
+.logo { margin: 0; font-size: 24px; color: var(--accent); }
+
+.nav-links { display: flex; gap: 5px; }
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover { background-color: var(--accent); color: var(--primary); }
+
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), #2a4cb3);
+}
+
+.hero h2 { font-size: 36px; margin-top: 0; }
+
+button {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover { background-color: white; outline: 2px solid var(--accent); }
+
+main section { margin: 20px; }
+
+h2 { color: var(--primary); }
+.hero h2 { color: white; }
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.match-card, .card {
+  background-color: white;
+  padding: 18px;
+  border-radius: 10px;
+  border-top: 5px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.match-card h3 { margin: 8px 0; color: var(--primary); }
+.match-card p { margin: 4px 0; }
+.match-card.selected { outline: 3px solid #2a9d8f; }
+
+.match-no {
+  background-color: var(--primary);
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.price { font-weight: bold; }
+.seats { color: #2a9d8f; font-size: 14px; }
+
+.card input, .card select {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 8px;
+  margin: 5px 0 12px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.card label { display: block; font-weight: bold; }
+.message { background: #e8f6f3; border-left: 4px solid #2a9d8f; padding: 8px 12px; border-radius: 5px; }
+.error { color: #d62828; font-weight: bold; }
+button:disabled { opacity: 0.6; cursor: wait; }
