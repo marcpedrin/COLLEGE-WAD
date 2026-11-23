@@ -1,0 +1,447 @@
+:root {
+    --primary: #0b1d51;
+    --accent: #f5b301;
+    --background: #f2f4f8;
+    --text: #222222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--accent);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+section {
+    margin: 20px;
+    scroll-margin-top: 80px;
+}
+
+h2 {
+    color: var(--primary);
+}
+
+#banner {
+    margin: 0;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), #2a4cb3);
+}
+
+#banner h2 {
+    color: white;
+    font-size: 36px;
+}
+
+button {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+#about {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.table-box {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+select, input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    min-width: 250px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-top: 5px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    min-width: 250px;
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ---------- Activity 3: booking form page ---------- */
+.req {
+    color: #d62828;
+    font-weight: bold;
+}
+
+.booking-form {
+    max-width: 650px;
+}
+
+fieldset {
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: var(--primary);
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+.booking-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="number"],
+.booking-form select {
+    max-width: 100%;
+}
+
+.field-title {
+    font-weight: bold;
+    margin: 12px 0 4px;
+}
+
+.choice-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.choice-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.choice-group input {
+    width: auto;
+    margin: 0;
+}
+
+/* red border only after the user has touched the field (or tried to submit) */
+.booking-form input:user-invalid,
+.booking-form select:user-invalid {
+    border: 2px solid #d62828;
+    background-color: #fff3f3;
+}
+
+.booking-form input:user-valid,
+.booking-form select:user-valid {
+    border: 2px solid #2a9d8f;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.success-card {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* ---------- Activity 5: toast notifications ---------- */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.toast {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 18px;
+    border-left: 5px solid #2a9d8f;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 320px;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-info {
+    border-left-color: var(--accent);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Activity 7: summary ---------- */
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary);
+    border-top: 1px solid #dddddd;
+    padding-top: 10px;
+}
+
+/* ---------- Activity 8: flexbox navbar + hamburger ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 5px;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 26px;
+    margin: 0;
+    padding: 4px 10px;
+}
+
+.hamburger:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* ---------- Activity 8: match cards with CSS grid ---------- */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.view-toggle button {
+    background-color: white;
+    border: 2px solid var(--primary);
+}
+
+.view-toggle button.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.match-card {
+    background-color: white;
+    padding: 18px;
+    border-radius: 10px;
+    border-top: 5px solid var(--accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.match-card h3 {
+    margin: 8px 0;
+    color: var(--primary);
+}
+
+.match-card p {
+    margin: 4px 0;
+}
+
+.match-no {
+    background-color: var(--primary);
+    color: white;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.prices {
+    font-size: 13px;
+    color: #555555;
+}
+
+/* list view: one card per row, content laid out horizontally */
+.match-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.match-grid.list-view .match-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.no-matches {
+    font-weight: bold;
+    color: #d62828;
+}
+
+/* guidelines as a 3-column grid */
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ---------- Activity 8: media queries ---------- */
+@media (max-width: 992px) {
+    .match-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* tablets and phones: single column + hamburger menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .match-grid,
+    .guidelines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    #banner h2 {
+        font-size: 26px;
+    }
+}
